@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function App() {
-  return (
-   <div>PWA here</div>
-  );
+  return <div className="flex text-blue-400">PWA here</div>;
 }
 
 export default App;
