@@ -6,7 +6,7 @@ export const BottomNavigation = () => {
     {
       name: "Home",
       icon: HomeIcon,
-      path: "/home",
+      path: "/",
     },
     {
       name: "My Splits",
