@@ -15,10 +15,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
-        path: "about",
-        element: <About />,
-      },
-      {
+        index: true,
         path: "home",
         element: <Home />,
       },
@@ -33,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "profile",
         element: <Profile />,
+      },
+      {
+        path: "about",
+        element: <About />,
       },
     ],
   },
