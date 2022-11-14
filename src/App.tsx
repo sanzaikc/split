@@ -1,4 +1,9 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 
 import Root from "./layouts/Root";
 import About from "./screens/About";
@@ -8,35 +13,19 @@ import MySplits from "./screens/MySplits";
 import NotFound from "./screens/NotFound";
 import PendingSplits from "./screens/PendingSplits";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <NotFound />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "my-splits",
-        element: <MySplits />,
-      },
-      {
-        path: "pending",
-        element: <PendingSplits />,
-      },
-      {
-        path: "profile",
-        element: <Profile />,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Root />} errorElement={<NotFound />}>
+      <Route errorElement={<NotFound />}>
+        <Route index element={<Home />} />
+        <Route path="my-splits" element={<MySplits />} />
+        <Route path="pending" element={<PendingSplits />} />
+        <Route path="profile" element={<Profile />} />
+      </Route>
+      <Route path="about" element={<About />} />
+    </Route>
+  )
+);
 
 function App() {
   return <RouterProvider router={router} />;
