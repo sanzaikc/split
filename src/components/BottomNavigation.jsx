@@ -29,7 +29,7 @@ export const BottomNavigation = () => {
     },
   ];
   return (
-    <div className="absolute bottom-0 w-full flex-shrink-0 bg-sky-200">
+    <div className="absolute bottom-0 w-full flex-shrink-0 ">
       <div className="grid grid-cols-5">
         {bottomNavigations.map((el, index) =>
           index !== 2 ? (
@@ -41,7 +41,7 @@ export const BottomNavigation = () => {
               </div>
             </Link>
           ) : (
-            <div className="grid place-content-center">
+            <div key={index} className="grid place-content-center">
               <div className="h-10 w-10 rounded-full border-2 border-white"></div>
             </div>
           )

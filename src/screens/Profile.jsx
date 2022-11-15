@@ -1,7 +1,11 @@
-import React from "react";
+import ToggleTheme from "../components/ToggleTheme";
 
 const Profile = () => {
-  return <div>Profile</div>;
+  return (
+    <div>
+      <ToggleTheme />
+    </div>
+  );
 };
 
 export default Profile;
