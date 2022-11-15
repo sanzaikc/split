@@ -3,13 +3,17 @@ import { ReactComponent as HomeFilledIcon } from "./home-filled.svg";
 import { ReactComponent as FolderIcon } from "./folder.svg";
 import { ReactComponent as FolderFilledIcon } from "./folder-filled.svg";
 import { ReactComponent as PersonIcon } from "./person.svg";
+import { ReactComponent as PersonCircleIcon } from "./person-circle.svg";
 import { ReactComponent as WalletIcon } from "./wallet.svg";
+import { ReactComponent as WalletFilledIcon } from "./wallet-filled.svg";
 
 export {
   FolderIcon,
   FolderFilledIcon,
   HomeIcon,
   HomeFilledIcon,
+  PersonCircleIcon,
   PersonIcon,
   WalletIcon,
+  WalletFilledIcon,
 };
