@@ -1,5 +1,3 @@
-import React from "react";
-
 const PendingSplits = () => {
   return <div>PendingSplits</div>;
 };
