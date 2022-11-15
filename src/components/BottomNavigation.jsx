@@ -53,7 +53,11 @@ export const BottomNavigation = () => {
           index !== 2 ? (
             <NavLink to={el.path} key={index}>
               {({ isActive }) => (
-                <div className="flex cursor-pointer flex-col items-center space-y-1 py-2">
+                <div
+                  className={`flex cursor-pointer flex-col items-center space-y-1  py-2 ${
+                    isActive && "dark:bg-slate-700"
+                  }`}
+                >
                   {isActive ? (
                     <el.activeIcon className="h-6 w-6" />
                   ) : (
