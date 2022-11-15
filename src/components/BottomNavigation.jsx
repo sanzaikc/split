@@ -29,7 +29,10 @@ export const BottomNavigation = () => {
     },
   ];
   return (
-    <div className="absolute bottom-0 w-full flex-shrink-0 ">
+    <div
+      className="absolute bottom-0 w-full flex-shrink-0"
+      style={{ boxShadow: "0 -3px 5px -5px currentcolor" }}
+    >
       <div className="grid grid-cols-5">
         {bottomNavigations.map((el, index) =>
           index !== 2 ? (
