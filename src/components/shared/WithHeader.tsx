@@ -17,7 +17,7 @@ const WithHeader = ({
   const navigate = useNavigate();
 
   return (
-    <div className="flex h-full flex-col ">
+    <div className="flex h-full flex-col">
       <div
         className="flex flex-shrink-0 items-center space-x-4 p-4"
         style={{ boxShadow: "0 3px 5px -5px currentcolor" }}
