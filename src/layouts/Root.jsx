@@ -8,7 +8,7 @@ const Root = () => {
     <ThemeContainer>
       <div className="relative h-screen min-h-screen w-screen  tracking-wide">
         <div className="container relative mx-auto flex h-full max-w-md flex-col shadow-lg">
-          <div className="flex-grow bg-transparent bg-gray-200 px-4 dark:bg-slate-700">
+          <div className="flex-grow bg-gray-200 px-4 dark:bg-slate-700">
             <Outlet />
           </div>
 

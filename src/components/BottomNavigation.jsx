@@ -1,4 +1,5 @@
 import React from "react";
+
 import { NavLink } from "react-router-dom";
 
 import {
@@ -26,17 +27,17 @@ const BottomNavigation = () => {
       name: "My Splits",
       icon: FolderIcon,
       activeIcon: FolderFilledIcon,
-      path: "/my-splits",
+      path: "/splits/my",
     },
     {
       name: "Add New",
-      path: "/",
+      path: "/splits/create",
     },
     {
       name: "Pending",
       icon: WalletIcon,
       activeIcon: WalletFilledIcon,
-      path: "/pending",
+      path: "/splits/pending",
     },
     {
       name: "Profile",
@@ -54,37 +55,41 @@ const BottomNavigation = () => {
       >
         <div className="grid grid-cols-5">
           {bottomNavigations.map((el, index) => (
-            <React.Fragment key={index}>
-              {index !== 2 ? (
-                <NavLink to={el.path}>
-                  {({ isActive }) => (
-                    <div
-                      className={`flex cursor-pointer flex-col items-center space-y-1  py-2 ${
-                        isActive && "bg-gray-200 dark:bg-slate-700"
-                      }`}
-                    >
-                      {isActive ? (
-                        <el.activeIcon className="h-6 w-6" />
-                      ) : (
-                        <el.icon className="h-6 w-6" />
-                      )}
+            // <React.Fragment key={index}>
+            //   {index !== 2 ? (
+            <NavLink to={el.path} key={index}>
+              {({ isActive }) =>
+                index !== 2 ? (
+                  <div
+                    className={`flex cursor-pointer flex-col items-center space-y-1  py-2 ${
+                      isActive && "bg-gray-200 dark:bg-slate-700"
+                    }`}
+                  >
+                    {isActive ? (
+                      <el.activeIcon className="h-6 w-6" />
+                    ) : (
+                      <el.icon className="h-6 w-6" />
+                    )}
 
-                      <div
-                        className={`text-[10px] ${
-                          !isActive && "text-gray-500"
-                        }`}
-                      >
-                        {el.name}
-                      </div>
+                    <div
+                      className={`text-[10px] ${!isActive && "text-gray-500"}`}
+                    >
+                      {el.name}
                     </div>
-                  )}
-                </NavLink>
-              ) : (
-                <div className="grid place-content-center">
-                  <div className="h-10 w-10 rounded-full border-2 border-white"></div>
-                </div>
-              )}
-            </React.Fragment>
+                  </div>
+                ) : (
+                  <div className="grid h-full w-full place-content-center">
+                    <div className="h-10 w-10 rounded-full border-2 border-white"></div>
+                  </div>
+                )
+              }
+            </NavLink>
+            //   ) : (
+            //     <div className="grid place-content-center">
+            //       <div className="h-10 w-10 rounded-full border-2 border-white"></div>
+            //     </div>
+            //   )}
+            // </React.Fragment>
           ))}
         </div>
       </div>
