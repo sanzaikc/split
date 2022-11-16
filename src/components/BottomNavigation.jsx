@@ -55,8 +55,6 @@ const BottomNavigation = () => {
       >
         <div className="grid grid-cols-5">
           {bottomNavigations.map((el, index) => (
-            // <React.Fragment key={index}>
-            //   {index !== 2 ? (
             <NavLink to={el.path} key={index}>
               {({ isActive }) =>
                 index !== 2 ? (
@@ -84,12 +82,6 @@ const BottomNavigation = () => {
                 )
               }
             </NavLink>
-            //   ) : (
-            //     <div className="grid place-content-center">
-            //       <div className="h-10 w-10 rounded-full border-2 border-white"></div>
-            //     </div>
-            //   )}
-            // </React.Fragment>
           ))}
         </div>
       </div>
