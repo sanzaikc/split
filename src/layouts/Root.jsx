@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
-import { BottomNavigation } from "../components/BottomNavigation";
-import { ThemeContainer } from "../components/shared/ThemeContainer";
+import BottomNavigation from "../components/BottomNavigation";
+import ThemeContainer from "../components/shared/ThemeContainer";
 
 const Root = () => {
   return (

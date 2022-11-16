@@ -12,9 +12,9 @@ import {
   WalletIcon,
 } from "../assets/svg";
 
-import { ThemeContainer } from "./shared/ThemeContainer";
+import ThemeContainer from "./shared/ThemeContainer";
 
-export const BottomNavigation = () => {
+const BottomNavigation = () => {
   const bottomNavigations = [
     {
       name: "Home",
@@ -91,3 +91,5 @@ export const BottomNavigation = () => {
     </ThemeContainer>
   );
 };
+
+export default BottomNavigation;
