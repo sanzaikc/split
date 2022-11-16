@@ -15,18 +15,25 @@ import {
 
 import ThemeContainer from "./shared/ThemeContainer";
 
+type NavElement = {
+  name: string;
+  icon?: React.ReactNode;
+  activeIcon?: React.ReactNode;
+  path: string;
+};
+
 const BottomNavigation = () => {
-  const bottomNavigations = [
+  const bottomNavigations: NavElement[] = [
     {
       name: "Home",
-      icon: HomeIcon,
-      activeIcon: HomeFilledIcon,
+      icon: <HomeIcon className="h-6 w-6" />,
+      activeIcon: <HomeFilledIcon className="h-6 w-6" />,
       path: "/",
     },
     {
       name: "My Splits",
-      icon: FolderIcon,
-      activeIcon: FolderFilledIcon,
+      icon: <FolderIcon className="h-6 w-6" />,
+      activeIcon: <FolderFilledIcon className="h-6 w-6" />,
       path: "/splits/my",
     },
     {
@@ -35,14 +42,14 @@ const BottomNavigation = () => {
     },
     {
       name: "Pending",
-      icon: WalletIcon,
-      activeIcon: WalletFilledIcon,
+      icon: <WalletIcon className="h-6 w-6" />,
+      activeIcon: <WalletFilledIcon className="h-6 w-6" />,
       path: "/splits/pending",
     },
     {
       name: "Profile",
-      icon: PersonIcon,
-      activeIcon: PersonCircleIcon,
+      icon: <PersonIcon className="h-6 w-6" />,
+      activeIcon: <PersonCircleIcon className="h-6 w-6" />,
       path: "/profile",
     },
   ];
@@ -54,8 +61,8 @@ const BottomNavigation = () => {
         style={{ boxShadow: "0 -3px 5px -5px currentcolor" }}
       >
         <div className="grid grid-cols-5">
-          {bottomNavigations.map((el, index) => (
-            <NavLink to={el.path} key={index}>
+          {bottomNavigations.map(({ name, path, icon, activeIcon }, index) => (
+            <NavLink to={path} key={index}>
               {({ isActive }) =>
                 index !== 2 ? (
                   <div
@@ -63,16 +70,12 @@ const BottomNavigation = () => {
                       isActive && "bg-gray-200 dark:bg-slate-700"
                     }`}
                   >
-                    {isActive ? (
-                      <el.activeIcon className="h-6 w-6" />
-                    ) : (
-                      <el.icon className="h-6 w-6" />
-                    )}
+                    <>{isActive ? activeIcon : icon}</>
 
                     <div
                       className={`text-[10px] ${!isActive && "text-gray-500"}`}
                     >
-                      {el.name}
+                      {name}
                     </div>
                   </div>
                 ) : (
