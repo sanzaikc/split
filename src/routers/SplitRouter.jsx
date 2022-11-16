@@ -9,7 +9,7 @@ const SplitRouter = () => {
   return (
     <Routes>
       <Route path="/create" element={<CreateSplit />} />
-      <Route path="pending" element={<PendingSplits />} />
+      <Route path="/pending" element={<PendingSplits />} />
       <Route path="/my" element={<MySplits />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
