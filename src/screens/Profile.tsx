@@ -1,5 +1,5 @@
-import ToggleTheme from "../components/ToggleTheme";
-import WithHeader from "../components/shared/WithHeader";
+import ToggleTheme from "components/ToggleTheme";
+import WithHeader from "components/shared/WithHeader";
 
 const Profile = () => {
   return (

@@ -1,7 +1,8 @@
 import React from "react";
+
 import { useNavigate } from "react-router-dom";
 
-import { ArrowLeftIcon } from "../../assets/svg";
+import { ArrowLeftIcon } from "assets/svg";
 
 type WithHeaderProps = {
   children: React.ReactNode;

@@ -1,5 +1,5 @@
-import { useUpdateTheme } from "../contexts/ThemeContext";
-import { useTheme } from "../hooks/useTheme";
+import { useUpdateTheme } from "contexts/ThemeContext";
+import { useTheme } from "hooks/useTheme";
 
 function ToggleTheme() {
   const theme = useTheme();

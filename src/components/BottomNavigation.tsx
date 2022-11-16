@@ -11,7 +11,7 @@ import {
   PersonIcon,
   WalletFilledIcon,
   WalletIcon,
-} from "../assets/svg";
+} from "assets/svg";
 
 import ThemeContainer from "./shared/ThemeContainer";
 
