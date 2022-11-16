@@ -6,8 +6,10 @@ import { ReactComponent as PersonIcon } from "./person.svg";
 import { ReactComponent as PersonCircleIcon } from "./person-circle.svg";
 import { ReactComponent as WalletIcon } from "./wallet.svg";
 import { ReactComponent as WalletFilledIcon } from "./wallet-filled.svg";
+import { ReactComponent as ArrowLeftIcon } from "./arrow-left.svg";
 
 export {
+  ArrowLeftIcon,
   FolderIcon,
   FolderFilledIcon,
   HomeIcon,

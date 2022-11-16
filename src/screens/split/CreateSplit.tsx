@@ -1,7 +1,7 @@
-import React from "react";
+import WithHeader from "../../components/shared/WithHeader";
 
 const CreateSplit = () => {
-  return <div>CreateSplit</div>;
+  return <WithHeader title="Create Split">CreateSplit</WithHeader>;
 };
 
 export default CreateSplit;
