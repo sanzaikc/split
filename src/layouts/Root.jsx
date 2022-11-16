@@ -1,18 +1,21 @@
 import { Outlet } from "react-router-dom";
 
 import { BottomNavigation } from "../components/BottomNavigation";
+import { ThemeContainer } from "../components/shared/ThemeContainer";
 
 const Root = () => {
   return (
-    <div className="relative h-screen min-h-screen w-screen  bg-blue-200 tracking-wide text-slate-700 dark:bg-slate-800 dark:text-gray-400">
-      <div className="container relative mx-auto flex h-full max-w-md flex-col shadow-lg">
-        <div className="flex-grow bg-transparent px-4 shadow-inner">
-          <Outlet />
-        </div>
+    <ThemeContainer>
+      <div className="relative h-screen min-h-screen w-screen  tracking-wide">
+        <div className="container relative mx-auto flex h-full max-w-md flex-col shadow-lg">
+          <div className="flex-grow bg-transparent bg-gray-200 px-4 dark:bg-slate-700">
+            <Outlet />
+          </div>
 
-        <BottomNavigation />
+          <BottomNavigation />
+        </div>
       </div>
-    </div>
+    </ThemeContainer>
   );
 };
 
