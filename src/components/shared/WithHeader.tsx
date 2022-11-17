@@ -20,7 +20,7 @@ const WithHeader = ({
   return (
     <div className="flex h-full flex-col">
       <div
-        className="flex flex-shrink-0 items-center space-x-4 p-4 text-lg font-semibold"
+        className=" flex flex-shrink-0 items-center space-x-4 p-4  text-lg font-semibold"
         style={{ boxShadow: "0 3px 5px -5px currentcolor" }}
       >
         {!disableBack && (
@@ -33,7 +33,7 @@ const WithHeader = ({
         <div className="">{title} </div>
       </div>
 
-      <div className="flex-grow  px-4">{children}</div>
+      <div className="flex-grow px-4 py-2">{children}</div>
     </div>
   );
 };
