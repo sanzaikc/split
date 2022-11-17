@@ -25,12 +25,12 @@ const WithHeader = ({
       >
         {!disableBack && (
           <ArrowLeftIcon
-            className="h-6 font-bold"
+            className="h-5 font-bold"
             onClick={() => navigate(-1)}
           />
         )}
 
-        <div className="">{title} </div>
+        <div className="tracking-wider">{title} </div>
       </div>
 
       <div className="flex-grow px-4 py-2">{children}</div>

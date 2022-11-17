@@ -9,6 +9,7 @@ import {
   HomeIcon,
   PersonCircleIcon,
   PersonIcon,
+  PlusCircleIcon,
   WalletFilledIcon,
   WalletIcon,
 } from "assets/svg";
@@ -38,6 +39,7 @@ const BottomNavigation = () => {
     },
     {
       name: "Add New",
+      icon: <PlusCircleIcon className="h-10 w-10" />,
       path: "/splits/create",
     },
     {
@@ -80,7 +82,8 @@ const BottomNavigation = () => {
                   </div>
                 ) : (
                   <div className="grid h-full w-full place-content-center">
-                    <div className="h-10 w-10 rounded-full border-2 border-white"></div>
+                    {icon}
+                    {/* <div className="h-10 w-10 rounded-full border-2 border-white"></div> */}
                   </div>
                 )
               }
