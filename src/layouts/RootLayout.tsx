@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import BottomNavigation from "components/BottomNavigation";
 import ThemeContainer from "components/shared/ThemeContainer";
 
-const Root = () => {
+const RootLayout = () => {
   return (
     <ThemeContainer>
       <div className="relative h-screen min-h-screen w-screen  select-none">
@@ -19,4 +19,4 @@ const Root = () => {
   );
 };
 
-export default Root;
+export default RootLayout;

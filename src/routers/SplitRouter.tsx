@@ -1,16 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 
-import CreateSplit from "screens/split/CreateSplit";
-import MySplits from "screens/MySplits";
+import CreateSplitScreen from "screens/split/CreateSplitScreen";
+import MySplitsScreen from "screens/MySplitsScreen";
+import PendingSplitsScreen from "screens/PendingSplitsScreen";
 import NotFound from "screens/NotFound";
-import PendingSplits from "screens/PendingSplits";
 
 const SplitRouter = () => {
   return (
     <Routes>
-      <Route path="/create" element={<CreateSplit />} />
-      <Route path="/pending" element={<PendingSplits />} />
-      <Route path="/my" element={<MySplits />} />
+      <Route path="/create" element={<CreateSplitScreen />} />
+      <Route path="/pending" element={<PendingSplitsScreen />} />
+      <Route path="/my" element={<MySplitsScreen />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

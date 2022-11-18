@@ -8,22 +8,24 @@ import {
 // routers
 import SplitRouter from "./routers/SplitRouter";
 
+// layouts
+import RootLayout from "./layouts/RootLayout";
+
 // screens
-import Root from "./layouts/Root";
-import About from "./screens/About";
-import Home from "./screens/Home";
-import Profile from "./screens/Profile";
+import AboutScreen from "./screens/AboutScreen";
+import HomeScreen from "./screens/HomeScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 import NotFound from "./screens/NotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Root />} errorElement={<NotFound />}>
+    <Route path="/" element={<RootLayout />} errorElement={<NotFound />}>
       <Route errorElement={<NotFound />}>
-        <Route index element={<Home />} />
+        <Route index element={<HomeScreen />} />
         <Route path="/splits/*" element={<SplitRouter />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="profile" element={<ProfileScreen />} />
       </Route>
-      <Route path="about" element={<About />} />
+      <Route path="about" element={<AboutScreen />} />
     </Route>
   )
 );

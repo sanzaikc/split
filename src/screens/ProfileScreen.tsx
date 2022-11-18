@@ -1,7 +1,7 @@
 import ToggleTheme from "components/ToggleTheme";
 import WithHeader from "components/shared/WithHeader";
 
-const Profile = () => {
+const ProfileScreen = () => {
   return (
     <WithHeader title="Profile" disableBack>
       <div className="grid h-full place-content-center">
@@ -11,4 +11,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ProfileScreen;

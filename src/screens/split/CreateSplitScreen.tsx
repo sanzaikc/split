@@ -1,7 +1,7 @@
 import WithHeader from "components/shared/WithHeader";
 
-const CreateSplit = () => {
+const CreateSplitScreen = () => {
   return <WithHeader title="Create Split">CreateSplit</WithHeader>;
 };
 
-export default CreateSplit;
+export default CreateSplitScreen;
