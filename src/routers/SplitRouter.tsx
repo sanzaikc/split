@@ -8,9 +8,9 @@ import NotFound from "screens/NotFound";
 const SplitRouter = () => {
   return (
     <Routes>
-      <Route path="/create" element={<CreateSplitScreen />} />
-      <Route path="/pending" element={<PendingSplitsScreen />} />
-      <Route path="/my" element={<MySplitsScreen />} />
+      <Route path="create" element={<CreateSplitScreen />} />
+      <Route path="pending" element={<PendingSplitsScreen />} />
+      <Route path="my" element={<MySplitsScreen />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
