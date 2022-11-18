@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 
-import BottomNavigation from "components/BottomNavigation";
 import ThemeContainer from "components/shared/ThemeContainer";
 
 const RootLayout = () => {
@@ -11,8 +10,6 @@ const RootLayout = () => {
           <div className="flex-grow bg-gray-200 dark:bg-slate-700">
             <Outlet />
           </div>
-
-          <BottomNavigation />
         </div>
       </div>
     </ThemeContainer>

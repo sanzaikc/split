@@ -35,18 +35,18 @@ const BottomNavigation = () => {
       name: "My Splits",
       icon: <FolderIcon className="h-6 w-6" />,
       activeIcon: <FolderFilledIcon className="h-6 w-6" />,
-      path: "/splits/my",
+      path: "/my-splits",
     },
     {
       name: "Add New",
       icon: <PlusCircleIcon className="h-10 w-10" />,
-      path: "/splits/create",
+      path: "/create",
     },
     {
       name: "Pending",
       icon: <WalletIcon className="h-6 w-6" />,
       activeIcon: <WalletFilledIcon className="h-6 w-6" />,
-      path: "/splits/pending",
+      path: "/pending",
     },
     {
       name: "Profile",
@@ -83,7 +83,6 @@ const BottomNavigation = () => {
                 ) : (
                   <div className="grid h-full w-full place-content-center">
                     {icon}
-                    {/* <div className="h-10 w-10 rounded-full border-2 border-white"></div> */}
                   </div>
                 )
               }
