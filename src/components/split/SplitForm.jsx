@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Button, MultiSelect } from "@mantine/core";
+import EditableSplitItem from "./EditableSplitItem";
 
 const data = [
   { value: "react", label: "React" },
@@ -17,12 +18,33 @@ const SplitForm = () => {
 
   const [splitables, setSplitables] = React.useState([]);
 
-  const detailedSplitables = React.useMemo(() => {
-    return splitables.map((el) => ({
+  const [detailedSplitables, setDetailSplitables] = React.useState([]);
+
+  // const detailedSplitables = React.useMemo(() => {
+  //   return splitables.map((el) => ({
+  //     ...el,
+  //     item: el.value,
+  //     quantity: el?.quantity ?? 1,
+  //     unitPrice: el?.unitPrice ?? 0,
+  //   }));
+  // }, [splitables]);
+
+  // methods
+  function handleEditItem(item) {
+    setDetailSplitables((prev) =>
+      prev.map((el) => (el.label === item.label ? { ...el, ...item } : el))
+    );
+  }
+
+  React.useEffect(() => {
+    const detailSplitables = splitables.map((el) => ({
+      ...el,
       item: el.value,
       quantity: el?.quantity ?? 1,
       unitPrice: el?.unitPrice ?? 0,
     }));
+
+    setDetailSplitables(detailSplitables);
   }, [splitables]);
 
   return (
@@ -49,6 +71,10 @@ const SplitForm = () => {
           return item;
         }}
       />
+
+      {detailedSplitables.map((el, index) => (
+        <EditableSplitItem key={index} {...el} onItemEdit={handleEditItem} />
+      ))}
 
       <div className="mx-auto w-2/3">
         <Button fullWidth variant="outline">
