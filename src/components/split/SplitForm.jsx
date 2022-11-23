@@ -17,13 +17,11 @@ const SplitForm = () => {
 
   const [splitables, setSplitables] = React.useState([]);
 
-  const [detailedSplitables, setDetailedSplitables] = React.useState([]);
-
-  React.useEffect(() => {
-    splitables.map((el) => ({
+  const detailedSplitables = React.useMemo(() => {
+    return splitables.map((el) => ({
       item: el.value,
-      quantity: 1,
-      price: 0,
+      quantity: el?.quantity ?? 1,
+      unitPrice: el?.unitPrice ?? 0,
     }));
   }, [splitables]);
 
