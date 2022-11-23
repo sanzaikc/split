@@ -5,6 +5,8 @@ import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 
+import { MantineProvider } from "@mantine/core";
+
 import { DarkThemeProvider } from "./contexts/ThemeContext";
 
 const root = ReactDOM.createRoot(
@@ -12,9 +14,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <DarkThemeProvider>
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+      {/* <DarkThemeProvider> */}
       <App />
-    </DarkThemeProvider>
+      {/* </DarkThemeProvider> */}
+    </MantineProvider>
   </React.StrictMode>
 );
 
