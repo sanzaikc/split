@@ -66,6 +66,12 @@ const SplitForm = () => {
         }}
       />
 
+      <div className="flex justify-between text-sm">
+        <div>Item</div>
+        <div>Quantity</div>
+        <div>Unit Price</div>
+      </div>
+
       {detailedSplitables.map((el, index) => (
         <EditableSplitItem
           key={index}
