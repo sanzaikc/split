@@ -66,19 +66,23 @@ const SplitForm = () => {
         }}
       />
 
-      <div className="flex justify-between text-sm">
-        <div>Item</div>
-        <div>Quantity</div>
-        <div>Unit Price</div>
-      </div>
+      {detailedSplitables.length && (
+        <>
+          <div className="flex justify-between text-sm">
+            <div>Item</div>
+            <div>Quantity</div>
+            <div>Unit Price</div>
+          </div>
 
-      {detailedSplitables.map((el, index) => (
-        <EditableSplitItem
-          key={index}
-          splitItem={el}
-          onItemEdit={handleEditItem}
-        />
-      ))}
+          {detailedSplitables.map((el, index) => (
+            <EditableSplitItem
+              key={index}
+              splitItem={el}
+              onItemEdit={handleEditItem}
+            />
+          ))}
+        </>
+      )}
 
       <div className="mx-auto w-2/3">
         <Button fullWidth variant="outline">
