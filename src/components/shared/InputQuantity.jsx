@@ -15,7 +15,7 @@ const InputQuantity = ({
   return (
     <Group spacing={5}>
       <ActionIcon
-        size={42}
+        size={36}
         variant="default"
         onClick={() => handlers.current.decrement()}
       >
@@ -34,7 +34,7 @@ const InputQuantity = ({
       />
 
       <ActionIcon
-        size={42}
+        size={36}
         variant="default"
         onClick={() => handlers.current.increment()}
       >

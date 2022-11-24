@@ -67,7 +67,11 @@ const SplitForm = () => {
       />
 
       {detailedSplitables.map((el, index) => (
-        <EditableSplitItem key={index} {...el} onItemEdit={handleEditItem} />
+        <EditableSplitItem
+          key={index}
+          splitItem={el}
+          onItemEdit={handleEditItem}
+        />
       ))}
 
       <div className="mx-auto w-2/3">
