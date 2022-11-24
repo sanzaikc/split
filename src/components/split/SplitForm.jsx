@@ -20,32 +20,26 @@ const SplitForm = () => {
 
   const [detailedSplitables, setDetailSplitables] = React.useState([]);
 
-  // const detailedSplitables = React.useMemo(() => {
-  //   return splitables.map((el) => ({
-  //     ...el,
-  //     item: el.value,
-  //     quantity: el?.quantity ?? 1,
-  //     unitPrice: el?.unitPrice ?? 0,
-  //   }));
-  // }, [splitables]);
-
   // methods
+  function handleSplitableItem(newItem) {
+    setSplitables((current) => [...current, newItem]);
+
+    setDetailSplitables((prev) => [
+      ...prev,
+      {
+        label: newItem.label,
+        item: newItem.value,
+        quantity: newItem?.quantity ?? 1,
+        unitPrice: newItem?.unitPrice ?? 0,
+      },
+    ]);
+  }
+
   function handleEditItem(item) {
     setDetailSplitables((prev) =>
       prev.map((el) => (el.label === item.label ? { ...el, ...item } : el))
     );
   }
-
-  React.useEffect(() => {
-    const detailSplitables = splitables.map((el) => ({
-      ...el,
-      item: el.value,
-      quantity: el?.quantity ?? 1,
-      unitPrice: el?.unitPrice ?? 0,
-    }));
-
-    setDetailSplitables(detailSplitables);
-  }, [splitables]);
 
   return (
     <div className="flex flex-col space-y-4">
@@ -60,14 +54,14 @@ const SplitForm = () => {
 
       <MultiSelect
         label="Split Items"
-        data={[]}
+        data={splitables}
         placeholder="Select items"
         searchable
         creatable
         getCreateLabel={(query) => `+ Create ${query}`}
         onCreate={(query) => {
           const item = { value: query, label: query };
-          setSplitables((current) => [...current, item]);
+          handleSplitableItem(item);
           return item;
         }}
       />
