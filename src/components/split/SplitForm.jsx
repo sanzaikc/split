@@ -59,7 +59,7 @@ const SplitForm = () => {
         placeholder="Select items"
         searchable
         creatable
-        getCreateLabel={(query) => `+ Create ${query}`}
+        getCreateLabel={(query) => `+ Add ${query}`}
         onCreate={(query) => {
           const item = { value: query, label: query };
           handleSplitableItem(item);

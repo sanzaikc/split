@@ -19,9 +19,10 @@ const EditableSplitItem = ({ splitItem, onItemEdit }) => {
 
       <div className="w-2/5">
         <NumberInput
-          step={100}
           value={splitItem.unitPrice}
           onChange={(val) => onItemEdit({ ...splitItem, unitPrice: val })}
+          min={0}
+          step={100}
         />
       </div>
     </div>
