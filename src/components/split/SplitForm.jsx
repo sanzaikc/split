@@ -67,7 +67,7 @@ const SplitForm = () => {
         }}
       />
 
-      {detailedSplitables.length && (
+      {!!detailedSplitables.length && (
         <>
           <div className="flex justify-between text-sm">
             <div>Item</div>
