@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Button, MultiSelect } from "@mantine/core";
+
 import EditableSplitItem from "./EditableSplitItem";
 
 const data = [
