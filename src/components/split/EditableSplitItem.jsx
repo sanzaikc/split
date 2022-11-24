@@ -4,10 +4,10 @@ import InputQuantity from "components/shared/InputQuantity";
 
 const EditableSplitItem = ({ splitItem, onItemEdit }) => {
   return (
-    <div className="flex items-center justify-between space-x-2 rounded border border-blue-200 px-4 py-2">
-      <div className="w-2/3">{splitItem.label}</div>
+    <div className="flex items-center justify-between space-x-2 rounded border border-blue-200 px-2 py-2">
+      <div className="w-3/5">{splitItem.label}</div>
 
-      <div className="w-2/3">
+      <div className="w-3/5 ">
         <InputQuantity
           quantity={splitItem.quantity}
           step={1}
@@ -17,7 +17,7 @@ const EditableSplitItem = ({ splitItem, onItemEdit }) => {
         />
       </div>
 
-      <div className="w-1/3">
+      <div className="w-2/5">
         <NumberInput
           step={100}
           value={splitItem.unitPrice}
